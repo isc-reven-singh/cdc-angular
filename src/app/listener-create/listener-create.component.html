@@ -1,0 +1,49 @@
+<div class="container custom-container">
+    <div class="col-md-12">
+      <h3 class="mb-3 text-center">Create Listener</h3>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="listenerDetails.name" class="form-control" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="listenerDetails.type" class="form-control" placeholder="Type">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="listenerDetails.tcphost" class="form-control" placeholder="TCPHost">
+      </div>
+      <div class="form-group">
+        <input type="number" [(ngModel)]="listenerDetails.tcpport" class="form-control" placeholder="TCPPort">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="listenerDetails.databasehost" class="form-control" placeholder="DatabaseHost">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="listenerDetails.databaseport" class="form-control" placeholder="DatabasePort">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="listenerDetails.databaseuser" class="form-control" placeholder="DatabaseUser">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="listenerDetails.databasepass" class="form-control" placeholder="DatabasePass">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="listenerDetails.database" class="form-control" placeholder="Database">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="listenerDetails.table" class="form-control" placeholder="Table">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="listenerDetails.serverid" class="form-control" placeholder="ServerId">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="listenerDetails.status" class="form-control" placeholder="Status">
+      </div>
+  
+
+  
+      <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" (click)="addListener(listenerDetails)">Create Listener</button>
+      </div>
+  
+    </div>
+  </div>

@@ -1,0 +1,46 @@
+<div class="container custom-container-2">
+    <!-- Show it when there is no employee -->
+    <div class="no-data text-center" *ngIf="Listener.length == 0">
+      <p>There is no listener added yet!</p>
+      <button class="btn btn-outline-primary" routerLink="/create-listener">
+        Add Listener
+      </button>
+    </div>
+  
+    <!-- Employees list table, it hides when there is no employee -->
+    <div *ngIf="Listener.length !== 0">
+      <h3 class="mb-3 text-center">Listeners</h3>
+  
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Type</th>
+              <th scope="col">TCP Port</th>
+              <th scope="col">Database</th>
+              <th scope="col">Table</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let listener of Listener">
+              <td>{{ listener.name }}</td>
+              <td>{{ listener.type }}</td>
+              <td>{{ listener.tcpport }}</td>
+              <td>{{ listener.database }}</td>
+              <td>{{ listener.table }}</td>
+              <td>{{ listener.status }}</td>
+              <td>
+                <span class="delete" (click)="startListener(listener.name)">Start</span>&nbsp;
+                <span class="delete" (click)="stopListener(listener.name)">Stop</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-outline-primary" routerLink="/create-listener">Add Listener</button>
+      </div>
+    </div>
+  </div>
+  
